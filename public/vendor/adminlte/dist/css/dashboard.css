@@ -1,0 +1,32 @@
+.permission_label {
+    margin:0 3px 5px 0;
+}
+
+.permission_value {
+    margin:3px 6px auto 0
+}
+
+.partials-error-div{
+    margin:10px 0 0 0;
+}
+
+.add_admin , .add_teacher , .add_student {
+    margin: 0 5px;
+}
+
+.search_user_index, .paginate_margin {
+    margin:0 0 15px 0 !important;
+} 
+
+.no_data_table {
+    text-align: center;
+    font-weight: bold;
+}
+
+.show-btn {
+    font-weight: bold;
+}
+
+.select-edit-ticket {
+    margin-right:50px
+}
