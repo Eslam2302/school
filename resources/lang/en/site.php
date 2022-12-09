@@ -91,6 +91,15 @@ return [
     'Details'           =>  'Details',
     'Add_Ticket'        =>  'Add Ticket',
 
+    //Classrooms Create
+
+    'Classroom' =>  'Classroom',
+    'Classrooms' =>  'Classrooms',
+    'Class_Number'   => 'Class Number',
+    'Level'        =>  'Level',
+    'No_Classrooms_To_Show' => 'No Classrooms To Show',
+
+
 
     
 

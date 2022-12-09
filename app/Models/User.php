@@ -37,6 +37,7 @@ class User extends Authenticatable
         'parent_name',
         'parent_number',
         'image',
+        'class_id',
     ];
 
     protected $appends = ['image_path'];
@@ -102,6 +103,14 @@ class User extends Authenticatable
 
         return $this->hasMany(ticket::class);
 
-    } // end of product function
+    } // end of tickets function
+
+    public function classroom() {
+
+        return $this->belongsTo(Classroom::class);
+
+    } // end of classroom function
+
+
 
 }

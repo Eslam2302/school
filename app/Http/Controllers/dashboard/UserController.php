@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Classroom;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Activitylog\Models\Activity;
@@ -139,6 +140,7 @@ class UserController extends Controller
             'gender' => 'required',
             'date_of_birth' => 'required',
             'date_of_join' => 'required',
+            'image' => 'image'
         ];
 
         /* if ($user->hasRole(['admin', 'teacher'])) {
@@ -150,11 +152,27 @@ class UserController extends Controller
         } else {
             $request->validate($rules);
             $requests_data = $request->except(['permissions']);
-        }
- */
+        }  */
 
         $request->validate($rules);
-        $requests_data = $request->except(['permissions']);
+        $requests_data = $request->except(['permissions','image']);
+        
+        if($request->image) {
+
+            if($user->image != 'default.png') {
+
+                storage::disk('public_uploads')->delete('/user_images/' . $user->image);
+               
+            }
+
+            Image::make($request->image)->resize(300, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(public_path('uploads/user_images/' . $request->image->hashName()));
+
+            $requests_data['image'] = $request->image->hashName(); 
+
+        }
+
 
         $user->update($requests_data);
         $activity = Activity::all()->last();
@@ -163,6 +181,13 @@ class UserController extends Controller
 
     public function destroy(User $user)
     {
+
+        if($user->image != 'default.png') {
+
+            storage::disk('public_uploads')->delete('/user_images/' . $user->image);
+
+        }
+
         $user->delete();
         $activity = Activity::all()->last();
         return redirect()->route('dashboard.users.index');

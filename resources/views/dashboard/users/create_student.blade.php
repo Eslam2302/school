@@ -116,7 +116,20 @@
                     </div>
 
                 </div>
-                <div class="col-md-9"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>{{__('site.Classroom')}}</label>
+                        <select name="class_id" class="custom-select">
+                        <option selected>{{__('site.Please_Choose_One')}}</option>
+                        @foreach ($classrooms as $classroom)
+
+                            <option value="{{ $classroom->id }}">{{ $classroom->level->year_type }} ({{ $classroom->level->year_level }}) Class:{{ $classroom->class_number }} </option>
+
+                        @endforeach
+                    </select>
+                    </div>
+                </div>
 
 
                 <div class="form-group col-md-12">

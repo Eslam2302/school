@@ -20,6 +20,7 @@ class CreateTicketsTable extends Migration
             $table->string('type');
             $table->string('subject');
             $table->text('details');
+            $table->string('image')->nullable();
             $table->string('status')->default('new');
 
             $table->timestamps();

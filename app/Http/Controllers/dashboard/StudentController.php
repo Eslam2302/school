@@ -5,6 +5,7 @@ namespace App\Http\Controllers\dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Classroom;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 
@@ -21,8 +22,8 @@ class StudentController extends Controller
 
     public function create()
     {
-
-        return view('dashboard.users.create_student');
+        $classrooms = Classroom::all();
+        return view('dashboard.users.create_student', compact('classrooms'));
     
     }//end of create
 
@@ -44,6 +45,7 @@ class StudentController extends Controller
             'date_of_birth' => 'required',
             'date_of_join' => 'required',
             'image' => 'image',
+            'class_id' => 'required',
 
         ]);
        

@@ -6,7 +6,7 @@ use App\Http\Controllers\dashboard\UserController;
 use App\Http\Controllers\dashboard\TeacherController;
 use App\Http\Controllers\dashboard\StudentController;
 use App\Http\Controllers\dashboard\TicketController;
-use App\Http\Controllers\dashboard\ShowUserController;
+use App\Http\Controllers\dashboard\ClassroomController;
 
 
 
@@ -28,6 +28,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
         Route::resource('users', UserController::class);
 
 
+        // Class rom Route
+        Route::resource('classrooms', ClassroomController::class);
 
 
 

@@ -91,6 +91,15 @@ return [
     'Details'           =>  'الوصف',
     'Add_Ticket'        =>  'اضافة تيكت',
 
+    //Classrooms Create
+
+    'Classroom' =>  'الفصل',
+    'Classrooms' =>  'فصول',
+    'Class_Number'   => 'رقم الفصل',
+    'Level'        =>  'السنه الدراسيه',
+    'No_Classrooms_To_Show' => 'لا يوجد فصول لعرضها',
+
+
 
 
 

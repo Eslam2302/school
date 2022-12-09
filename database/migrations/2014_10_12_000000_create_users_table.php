@@ -15,6 +15,9 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('class_id')->unsigned()->nullable();
+
             $table->string('first_name');
             $table->string('second_name');
             $table->string('last_name');
@@ -31,6 +34,8 @@ class CreateUsersTable extends Migration
             $table->string('parent_number')->nullable();
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('class_id')->references('id')->on('classrooms')->onDelete('cascade'); 
         });
     }
 

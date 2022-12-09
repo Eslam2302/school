@@ -19,7 +19,10 @@ class ticket extends Model
         'subject',
         'status',
         'details',
+        'image',
     ];
+
+    protected $appends = ['image_path'];
 
     public function getActivitylogOptions(): LogOptions
     {
@@ -30,6 +33,12 @@ class ticket extends Model
         ->setDescriptionForEvent(fn(string $eventName) => "Ticket {$eventName}")
         ->useLogName('Ticket');
         // Chain fluent methods for configuration options
+    }
+
+    public function getImagePathAttribute() {
+
+        return asset('uploads/ticket_images/' . $this->image);
+
     }
 
 

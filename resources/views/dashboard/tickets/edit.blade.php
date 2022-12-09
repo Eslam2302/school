@@ -71,6 +71,14 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <img src="{{ $ticket->image_path }}" class="img_ticket_edit">
+                    </div>
+                </div>
+            </div>
+
             @if ($ticket->status == 'new' || $ticket->status == 'in_progress' || $ticket->status == 'pending')
                 <form action="{{ route('dashboard.tickets.update', $ticket->id) }}" method="post"
                     enctype="multipart/form-data">

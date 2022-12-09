@@ -13,7 +13,7 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
     |
     */
-    
+
     'title' => 'AdminLTE 3',
     'title_prefix' => '',
     'title_postfix' => '',
@@ -349,14 +349,232 @@ return [
                 ],
             ],
         ],
-        
-        
-        
-        
-        
+        // Class Rooms
+        [
+            'text'    => 'Classrooms',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                // Create Class Room
+                [
+                    'text' => 'Create Classroom',
+                    'url'  => 'dashboard/classrooms/create',
+                    'can'  => 'both_admin',
+                ],
+                // Primary Levels And classes
+                [
+                    'text'    => 'Primary',
+                    'url'     => '#',
+                    'submenu' => [
+                        //Level 1
+                        [
+                            'text'    => 'Level 1',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/1',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/2',
+                                ],
+                            ],
+                        ],
+                        //Level 2
+                        [
+                            'text'    => 'Level 2',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/3',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/4',
+                                ],
+                            ],
+                        ],
+                        //Level 3
+                        [
+                            'text'    => 'Level 3',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/5',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/6',
+                                ],
+                            ],
+                        ],
+                        //Level 4
+                        [
+                            'text'    => 'Level 4',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/7',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/8',
+                                ],
+                            ],
+                        ],
+                        //Level 5
+                        [
+                            'text'    => 'Level 5',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/9',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/10',
+                                ],
+                            ],
+                        ],
+                        //Level 6
+                        [
+                            'text'    => 'Level 6',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/11',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/12',
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+                // Prep levels and classes
+                [
+                    'text'    => 'Prep',
+                    'url'     => '#',
+                    'submenu' => [
+                        //Level 1
+                        [
+                            'text'    => 'Level 1',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/13',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/14',
+                                ],
+                            ],
+                        ],
+                        //Level 2
+                        [
+                            'text'    => 'Level 2',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/15',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/16',
+                                ],
+                            ],
+                        ],
+                        //Level 3
+                        [
+                            'text'    => 'Level 3',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/17',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/18',
+                                ],
+                            ],
+                        ],
+
+
+                    ],
+                ],
+                // Secondary Levels and classes
+                [
+                    'text'    => 'Secondary',
+                    'url'     => '#',
+                    'submenu' => [
+                        //Level 1
+                        [
+                            'text'    => 'Level 1',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/19',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/20',
+                                ],
+                            ],
+                        ],
+                        //Level 2
+                        [
+                            'text'    => 'Level 2',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/21',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/22',
+                                ],
+                            ],
+                        ],
+                        //Level 3
+                        [
+                            'text'    => 'Level 3',
+                            'url'     => '#',
+                            'submenu' => [
+                                [
+                                    'text' => 'Class 1',
+                                    'url'  => 'dashboard/classrooms/23',
+                                ],
+                                [
+                                    'text' => 'Class 2',
+                                    'url'  => 'dashboard/classrooms/24',
+                                ],
+                            ],
+                        ],
+
+
+                    ],
+                ],
+            ],
+        ],
+        // Class Rooms
+
+
+
+
     ],
 
-    
+
 
     /*
     |--------------------------------------------------------------------------

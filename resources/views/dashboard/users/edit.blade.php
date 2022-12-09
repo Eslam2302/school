@@ -108,6 +108,19 @@
                 </div>
                 <div class="col-md-9"></div>
 
+
+
+                <div class="form-group col-md-12">
+                    <label for="">@lang('site.image')</label>
+                    <input type="file" name="image" class="form-control image"  id="image">
+                </div>
+
+                <div class="form-group col-md-12">
+                    <img src="{{ $user->image_path }}" style="width: 80px" class="img_thumbnail image-preview" alt="">
+                </div>
+
+
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>{{__('site.Birth_Date')}}</label>

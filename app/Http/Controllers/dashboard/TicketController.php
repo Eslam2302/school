@@ -9,6 +9,9 @@ use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Spatie\Activitylog\Models\Activity;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
+
 
 class TicketController extends Controller
 {
@@ -47,7 +50,18 @@ class TicketController extends Controller
             'details' => 'required',
         ]);
 
-        $requests_data = $request->all();
+        $requests_data = $request->except(['image']);
+
+        if($request->image) {
+
+            Image::make($request->image)->resize(300, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save(public_path('uploads/ticket_images/' . $request->image->hashName()));
+
+            $requests_data['image'] = $request->image->hashName(); 
+
+        }
+
         ticket::create($requests_data);
         $activity = Activity::all()->last();
         return redirect()->route('dashboard.tickets.index');

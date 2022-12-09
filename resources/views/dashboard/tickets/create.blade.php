@@ -72,6 +72,13 @@
                     </div>
                 </div>
 
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>{{__('site.image')}}</label>
+                        <input type="file" name="image" class="form-control">
+                    </div>
+                </div>
+
                 <input type="hidden" name="user_id" value="{{auth()->id()}}">
 
             </div>
